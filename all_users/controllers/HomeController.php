@@ -1,25 +1,38 @@
 <?php
 namespace controllers;
 
+use PDO;
 use services\UsersService;
 use yasmf\HttpHelper;
 use yasmf\View;
 
+/**
+ * Default controller
+ */
 class HomeController {
 
-    private $usersService;
+    private UsersService $usersService;
 
+    /**
+     * Create a new default controller
+     */
     public function __construct()
     {
         $this->usersService = UsersService::getDefaultUsersService();
     }
 
-    public function index($pdo) {
+    /**
+     * Default action
+     *
+     * @param PDO $pdo  the PDO object to connect to the database
+     * @return View the default view displaying all users
+     */
+    public function index(PDO $pdo): View {
         $status_id = (int)HttpHelper::getParam('status_id') ?: 2 ;
         $start_letter = htmlspecialchars(HttpHelper::getParam('start_letter').'%') ?: '%';
-        $searchStmt = $this->usersService->findUsersByUsernameAndStatus($pdo, $start_letter, $status_id) ;
+        $search_stmt = $this->usersService->findUsersByUsernameAndStatus($pdo, $start_letter, $status_id) ;
         $view = new View("views/all_users");
-        $view->setVar('searchStmt',$searchStmt);
+        $view->setVar('search_stmt',$search_stmt);
         return $view;
     }
 

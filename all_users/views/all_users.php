@@ -48,7 +48,7 @@ use yasmf\HttpHelper;
         <th>Status</th>
         <th></th>
     </tr>
-    <?php while ($row = $searchStmt->fetch()) { ?>
+    <?php while ($row = $search_stmt->fetch()) { ?>
         <tr>
             <td><?php echo $row['user_id'] ?></td>
             <td><?php echo $row['username'] ?></td>
