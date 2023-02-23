@@ -1,0 +1,22 @@
+{
+  "name": "yasmf/yasmf_hello_world",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/the-yasmf-project/yasmf"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "controllers\\": "all_users/controllers",
+      "services\\": "all_users/services"
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "phpunit/phpunit": "10.0.*",
+    "phpstan/phpstan": "1.10.*",
+    "ext-pdo": "*",
+    "yasmf/yasmf": ">=1.1.1"
+  }
+}
