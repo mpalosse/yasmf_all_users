@@ -9,7 +9,8 @@
   "autoload": {
     "psr-4": {
       "controllers\\": "all_users/controllers",
-      "services\\": "all_users/services"
+      "services\\": "all_users/services",
+      "application\\": "all_users/application"
     }
   },
   "require": {

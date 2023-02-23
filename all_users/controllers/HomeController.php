@@ -1,6 +1,7 @@
 <?php
 namespace controllers;
 
+use application\ComponentProvider;
 use PDO;
 use services\UsersService;
 use yasmf\HttpHelper;
@@ -18,7 +19,7 @@ class HomeController {
      */
     public function __construct()
     {
-        $this->usersService = UsersService::getDefaultUsersService();
+        $this->usersService = ComponentProvider::getDefaultUsersService();
     }
 
     /**

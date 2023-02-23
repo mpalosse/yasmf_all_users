@@ -30,17 +30,4 @@ class UsersService
         return $search_stmt;
     }
 
-
-    private static $defaultUsersService ;
-
-    /**
-     * @return UsersService the default unique user service object
-     */
-    public static function getDefaultUsersService(): UsersService
-    {
-        if (UsersService::$defaultUsersService == null) {
-            UsersService::$defaultUsersService = new UsersService();
-        }
-        return UsersService::$defaultUsersService;
-    }
 }
