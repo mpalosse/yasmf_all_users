@@ -18,7 +18,7 @@ class HomeController {
         $status_id = (int)HttpHelper::getParam('status_id') ?: 2 ;
         $start_letter = htmlspecialchars(HttpHelper::getParam('start_letter').'%') ?: '%';
         $searchStmt = $this->usersService->findUsersByUsernameAndStatus($pdo, $start_letter, $status_id) ;
-        $view = new View("all_users/views/all_users");
+        $view = new View("views/all_users");
         $view->setVar('searchStmt',$searchStmt);
         return $view;
     }

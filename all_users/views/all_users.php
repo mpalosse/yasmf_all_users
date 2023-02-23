@@ -19,8 +19,7 @@
 <body>
 
 <?php
-spl_autoload_extensions(".php");
-spl_autoload_register();
+require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 
 use yasmf\HttpHelper;
 
