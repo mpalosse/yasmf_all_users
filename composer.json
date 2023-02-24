@@ -10,7 +10,8 @@
     "psr-4": {
       "controllers\\": "all_users/controllers",
       "services\\": "all_users/services",
-      "application\\": "all_users/application"
+      "application\\": "all_users/application",
+      "dummies\\": "tests/dummies"
     }
   },
   "require": {
