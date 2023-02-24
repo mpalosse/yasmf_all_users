@@ -19,7 +19,7 @@
 <body>
 
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+require $_SERVER[ 'DOCUMENT_ROOT' ] . PREFIX_TO_RELATIVE_PATH . '/lib/vendor/autoload.php';
 
 use yasmf\HttpHelper;
 
@@ -48,14 +48,16 @@ use yasmf\HttpHelper;
         <th>Status</th>
         <th></th>
     </tr>
-    <?php while ($row = $search_stmt->fetch()) { ?>
-        <tr>
-            <td><?php echo $row['user_id'] ?></td>
-            <td><?php echo $row['username'] ?></td>
-            <td><?php echo $row['email'] ?></td>
-            <td><?php echo $row['status'] ?></td>
-        </tr>
-    <?php } ?>
+    <?php if (isset($search_stmt)) {
+        while ($row = $search_stmt->fetch()) { ?>
+            <tr>
+                <td><?php echo $row['user_id'] ?></td>
+                <td><?php echo $row['username'] ?></td>
+                <td><?php echo $row['email'] ?></td>
+                <td><?php echo $row['status'] ?></td>
+            </tr>
+        <?php }
+    } ?>
 </table>
 
 

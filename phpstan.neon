@@ -2,4 +2,5 @@ parameters:
 	level: max
 	paths:
 		- all_users
-		- tests
+	excludePaths:
+	    - all_users/lib

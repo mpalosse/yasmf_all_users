@@ -16,7 +16,7 @@
   ~     along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<phpunit bootstrap="vendor/autoload.php">
+<phpunit bootstrap="all_users/lib/vendor/autoload.php">
     <testsuites>
         <testsuite name="default test suit">
             <directory>tests</directory>
@@ -27,5 +27,8 @@
         <include>
             <directory suffix=".php">all_users</directory>
         </include>
+        <exclude>
+            <directory suffix=".php">all_users/lib</directory>
+        </exclude>
     </coverage>
 </phpunit>

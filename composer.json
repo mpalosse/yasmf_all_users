@@ -1,5 +1,8 @@
 {
   "name": "yasmf/yasmf_hello_world",
+  "config": {
+    "vendor-dir": "all_users/lib/vendor"
+  },
   "repositories": [
     {
       "type": "vcs",
@@ -10,8 +13,7 @@
     "psr-4": {
       "controllers\\": "all_users/controllers",
       "services\\": "all_users/services",
-      "application\\": "all_users/application",
-      "dummies\\": "tests/dummies"
+      "application\\": "all_users/application"
     }
   },
   "require": {
@@ -19,6 +21,6 @@
     "phpunit/phpunit": "10.0.*",
     "phpstan/phpstan": "1.10.*",
     "ext-pdo": "*",
-    "yasmf/yasmf": ">=1.1.1"
+    "yasmf/yasmf": ">=1.6"
   }
 }

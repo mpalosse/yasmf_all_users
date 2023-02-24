@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "853b26e0c6aa453e70acf6948c6211a7",
+    "content-hash": "bf779b5251231d3fce13bf39bfa09da3",
     "packages": [
         {
             "name": "myclabs/deep-copy",
@@ -1669,16 +1669,16 @@
         },
         {
             "name": "yasmf/yasmf",
-            "version": "1.1.1",
+            "version": "1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-yasmf-project/yasmf.git",
-                "reference": "f564f53f03b515cc2b3925ba973016f1ee25b56d"
+                "reference": "52312981c1e0c8c9eba6508c6ee60b612be371b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-yasmf-project/yasmf/zipball/f564f53f03b515cc2b3925ba973016f1ee25b56d",
-                "reference": "f564f53f03b515cc2b3925ba973016f1ee25b56d",
+                "url": "https://api.github.com/repos/the-yasmf-project/yasmf/zipball/52312981c1e0c8c9eba6508c6ee60b612be371b1",
+                "reference": "52312981c1e0c8c9eba6508c6ee60b612be371b1",
                 "shasum": ""
             },
             "require": {
@@ -1695,10 +1695,10 @@
                 }
             },
             "support": {
-                "source": "https://github.com/the-yasmf-project/yasmf/tree/1.1.1",
+                "source": "https://github.com/the-yasmf-project/yasmf/tree/1.6",
                 "issues": "https://github.com/the-yasmf-project/yasmf/issues"
             },
-            "time": "2023-02-23T14:57:55+00:00"
+            "time": "2023-02-24T09:18:36+00:00"
         }
     ],
     "packages-dev": [],

@@ -1,6 +1,8 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
+const PREFIX_TO_RELATIVE_PATH = "/all_users";
+require $_SERVER[ 'DOCUMENT_ROOT' ] . PREFIX_TO_RELATIVE_PATH . '/lib/vendor/autoload.php';
 
+use application\DefaultComponentFactory;
 use yasmf\DataSource;
 use yasmf\Router;
 
@@ -13,5 +15,7 @@ $data_source = new DataSource(
     $charset = 'utf8mb4'
 );
 
-$router = new Router() ;
-$router->route('all_users',$data_source);
+
+
+$router = new Router(new DefaultComponentFactory()) ;
+$router->route(PREFIX_TO_RELATIVE_PATH,$data_source);
