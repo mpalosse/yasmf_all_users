@@ -72,6 +72,18 @@ class UsersServiceTest extends TestCase
         } catch (PDOException) {
             $this->pdo->rollBack();
         }
+    }
 
+    public function testFindUsersByUsernameAndStatus()
+    {
+            // when fetching all users with no specification username and status
+            $statement = $this->usersService->findUsersByUsernameAndStatus($this->pdo, '%', 2);
+            // then, based on the readme file + one
+            self::assertEquals(6, $statement->rowCount());
+            // and the first user is the one expected
+            $row = $statement->fetch();
+            self::assertEquals(9, $row[ 'user_id' ]);
+            self::assertEquals('alpacino', $row[ 'username' ]);
+            self::assertEquals('Active account', $row[ 'status' ]);
     }
 }
