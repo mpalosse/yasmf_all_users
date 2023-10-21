@@ -23,7 +23,9 @@ use controllers\HomeController;
 use services\UsersService;
 use yasmf\ComponentFactory;
 use yasmf\NoControllerAvailableForName;
+use yasmf\NoControllerAvailableForNameException;
 use yasmf\NoServiceAvailableForName;
+use yasmf\NoServiceAvailableForNameException;
 
 /**
  *  The controller factory
@@ -35,25 +37,25 @@ class DefaultComponentFactory implements ComponentFactory
     /**
      * @param string $controller_name the name of the controller to instanciate
      * @return mixed the controller
-     * @throws NoControllerAvailableForName when controller is not found
+     * @throws NoControllerAvailableForNameException when controller is not found
      */
     public function buildControllerByName(string $controller_name): mixed {
         return match ($controller_name) {
             "Home" => $this->buildHomeController(),
-            default => throw new NoControllerAvailableForName($controller_name)
+            default => throw new NoControllerAvailableForNameException($controller_name)
         };
     }
 
     /**
      * @param string $service_name the name of the service
      * @return mixed the created service
-     * @throws NoServiceAvailableForName when service is not found
+     * @throws NoServiceAvailableForNameException when service is not found
      */
     public function buildServiceByName(string $service_name): mixed
     {
         return match($service_name) {
             "Users" => $this->buildUsersService(),
-            default => throw new NoServiceAvailableForName($service_name)
+            default => throw new NoServiceAvailableForNameException($service_name)
         };
     }
 
