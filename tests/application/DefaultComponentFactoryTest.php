@@ -22,8 +22,8 @@ namespace application;
 use controllers\HomeController;
 use PHPUnit\Framework\TestCase;
 use services\UsersService;
-use yasmf\NoControllerAvailableForName;
-use yasmf\NoServiceAvailableForName;
+use yasmf\NoControllerAvailableForNameException;
+use yasmf\NoServiceAvailableForNameException;
 
 class DefaultComponentFactoryTest extends TestCase
 {
@@ -48,7 +48,7 @@ class DefaultComponentFactoryTest extends TestCase
     public function testBuildControllerByName_Other()
     {
         // expected exception when ask for a non-existant controller
-        $this->expectException(NoControllerAvailableForName::class);
+        $this->expectException(NoControllerAvailableForNameException::class);
         $controller = $this->componentFactory->buildControllerByName("NoController");
     }
 
@@ -63,7 +63,7 @@ class DefaultComponentFactoryTest extends TestCase
     public function testBuildServiceByName_Other()
     {
         // expected exception when ask for a non-existant service
-        $this->expectException(NoServiceAvailableForName::class);
+        $this->expectException(NoServiceAvailableForNameException::class);
         $this->componentFactory->buildServiceByName("NoService");
     }
 }

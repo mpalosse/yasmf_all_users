@@ -1,14 +1,3 @@
-## Sample "All users"
-
-A simple project with a database connection.
-
-### The database schema
-
-The project expects a database with 2 tables "users" and "status".
-First you have to create a database on a mysql server.
-The SQL below can be used to create the schema and to populate the database.
-
-```
 CREATE TABLE `status` (
 `id` int(11) NOT NULL AUTO_INCREMENT,
 `name` varchar(50) NOT NULL,
@@ -47,35 +36,3 @@ VALUES
 ('alpacino',9,'alpacino@moviecountry.com',2),
 ('eddym',10,'eddym@beverly.com',3),
 ('francoises',11,'francoises@quaidesbrumes.org',3);
-```
-
-### To launch the application
-
-```
-$ docker-compose up -d 
-$ docker-compose exec all_users composer update
-```
-
-Open your favorite browser and use this URL to test the web app:
-
-`http://localhost:8080/all_users/`
-
-
-### To launch some actions
-
-First, you have to open a terminal to access the container after it's launched.
-
-`$ docker-compose exec all_users bash`
-
-
-- PHPStan 
-
-    `php ./all_users/lib/vendor/bin/phpstan --xdebug analyse -c ./phpstan.neon`
-
-- tests (without coverage)
-
-    `php ./all_users/lib/vendor/bin/phpunit`
-
-- tests with coverage
-
-    `php -d xdebug.mode=coverage ./all_users/lib/vendor/bin/phpunit  --coverage-html='reports/coverage'`

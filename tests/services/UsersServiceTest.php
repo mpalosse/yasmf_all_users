@@ -20,12 +20,11 @@
 namespace services;
 
 
-use Exception;
 use PDO;
 use PDOException;
 use PHPUnit\Framework\TestCase;
 use yasmf\DataSource;
-use function PHPUnit\Framework\assertEquals;
+
 
 class UsersServiceTest extends TestCase
 {
@@ -38,11 +37,11 @@ class UsersServiceTest extends TestCase
         parent::setUp();
         // given a pdo for tests
         $datasource = new DataSource(
-            $host = '127.0.01',
-            $port = 8889, # to change with the port your mySql server listen to
+            $host = 'all_users_db',
+            $port = 3306, # to change with the port your mySql server listen to
             $db_name = 'all_users', # to change with your db name
-            $user = 'root', # to change with your db username
-            $pass = 'root', # to change with your db password
+            $user = 'all_users', # to change with your db username
+            $pass = 'all_users', # to change with your db password
             $charset = 'utf8mb4'
         );
         $this->pdo = $datasource->getPdo();

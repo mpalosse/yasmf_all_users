@@ -1683,16 +1683,16 @@
         },
         {
             "name": "yasmf/yasmf",
-            "version": "1.6.1",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/the-yasmf-project/yasmf.git",
-                "reference": "0f504cca0bbf71bbcf67762cba9e4fa5076baee5"
+                "reference": "246e0b91033b2cda6ff18ac5a567fd06491f9445"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/the-yasmf-project/yasmf/zipball/0f504cca0bbf71bbcf67762cba9e4fa5076baee5",
-                "reference": "0f504cca0bbf71bbcf67762cba9e4fa5076baee5",
+                "url": "https://api.github.com/repos/the-yasmf-project/yasmf/zipball/246e0b91033b2cda6ff18ac5a567fd06491f9445",
+                "reference": "246e0b91033b2cda6ff18ac5a567fd06491f9445",
                 "shasum": ""
             },
             "require": {
@@ -1709,10 +1709,10 @@
                 }
             },
             "support": {
-                "source": "https://github.com/the-yasmf-project/yasmf/tree/1.6.1",
+                "source": "https://github.com/the-yasmf-project/yasmf/tree/1.6.2",
                 "issues": "https://github.com/the-yasmf-project/yasmf/issues"
             },
-            "time": "2023-10-21T17:03:02+00:00"
+            "time": "2023-10-22T07:47:08+00:00"
         }
     ],
     "packages-dev": [],
