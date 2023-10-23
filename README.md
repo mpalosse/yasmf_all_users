@@ -70,12 +70,22 @@ First, you have to open a terminal to access the container after it's launched.
 
 - PHPStan 
 
-    `php ./all_users/lib/vendor/bin/phpstan --xdebug analyse -c ./phpstan.neon`
+    `$ php ./all_users/lib/vendor/bin/phpstan --xdebug analyse -c ./phpstan.neon`
 
 - tests (without coverage)
 
-    `php ./all_users/lib/vendor/bin/phpunit`
+    `$ php ./all_users/lib/vendor/bin/phpunit`
 
 - tests with coverage
 
-    `php -d xdebug.mode=coverage ./all_users/lib/vendor/bin/phpunit  --coverage-html='reports/coverage'`
+    `$ php -d xdebug.mode=coverage ./all_users/lib/vendor/bin/phpunit  --coverage-html='reports/coverage'`
+
+### To connect to the DB from CLI
+
+First, you have to open a terminal to access the container after it's launched.
+
+`$ docker-compose exec all_users_db bash`
+
+Then you can connect with the mysql client
+
+`$ mysql -u all_users -p`
