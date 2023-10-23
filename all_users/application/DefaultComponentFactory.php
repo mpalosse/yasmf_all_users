@@ -22,9 +22,7 @@ namespace application;
 use controllers\HomeController;
 use services\UsersService;
 use yasmf\ComponentFactory;
-use yasmf\NoControllerAvailableForName;
 use yasmf\NoControllerAvailableForNameException;
-use yasmf\NoServiceAvailableForName;
 use yasmf\NoServiceAvailableForNameException;
 
 /**
