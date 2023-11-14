@@ -10,8 +10,7 @@ services:
     volumes:
       - ./:/app/
   all_users_db:
-    build: .
-    image: all_users:mysql8
+    image: mysql:8
     container_name: all_users_db
     environment:
       - MYSQL_USER=all_users
@@ -20,4 +19,6 @@ services:
       - MYSQL_ROOT_PASSWORD=root
     ports:
       - "6612:3306"
+    volumes:
+      - ./SQL/:/docker-entrypoint-initdb.d
     command: --character-set-server=utf8 --collation-server=utf8_general_ci 
