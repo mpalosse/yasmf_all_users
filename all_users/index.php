@@ -6,16 +6,16 @@ use application\DefaultComponentFactory;
 use yasmf\DataSource;
 use yasmf\Router;
 
+$dbConfig = require 'dbconfig.php';
+
 $data_source = new DataSource(
-    $host = 'all_users_db',
-    $port = 3306, 
-    $db_name = 'all_users', 
-    $user = 'all_users', 
-    $pass = 'all_users', 
-    $charset = 'utf8mb4'
+    $dbConfig['db_host'],
+    $dbConfig['db_port'], 
+    $dbConfig['db_name'], 
+    $dbConfig['db_user'], 
+    $dbConfig['db_pass'], 
+    $dbConfig['db_charset']
 );
-
-
 
 $router = new Router(new DefaultComponentFactory()) ;
 $router->route(PREFIX_TO_RELATIVE_PATH,$data_source);
