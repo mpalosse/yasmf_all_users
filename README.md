@@ -20,6 +20,13 @@ Open your favorite browser and use this URL to test the web app:
 
 `http://localhost:8080/all_users/`
 
+
+### To access application logs :
+
+```
+$ docker logs yasmf_all_users_app --follow
+```
+
 ### To stop and destroy containers
 
 ```
