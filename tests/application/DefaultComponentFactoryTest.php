@@ -25,6 +25,11 @@ use services\UsersService;
 use yasmf\NoControllerAvailableForNameException;
 use yasmf\NoServiceAvailableForNameException;
 
+#[CoversClass(DefaultComponentFactory::class)]
+#[UsesClass(HomeController::class)]
+#[UsesClass(UsersService::class)]
+#[UsesClass(NoControllerAvailableForNameException::class)]
+#[UsesClass(NoServiceAvailableForNameException::class)]
 class DefaultComponentFactoryTest extends TestCase
 {
 

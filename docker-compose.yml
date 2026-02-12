@@ -1,6 +1,6 @@
 services:
   all_users:
-    image: webdevops/php-apache-dev:8.2-alpine
+    image: webdevops/php-apache-dev:8.4-alpine
     container_name: yasmf_all_users_app
     working_dir: /app/
     ports:
