@@ -22,8 +22,12 @@ namespace controllers;
 use PDO;
 use PDOStatement;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use services\UsersService;
 
+#[CoversClass(HomeController::class)]
+#[UsesClass(UsersService::class)]
 class HomeControllerTest extends TestCase
 {
 

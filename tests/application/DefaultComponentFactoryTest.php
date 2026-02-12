@@ -21,6 +21,8 @@ namespace application;
 
 use controllers\HomeController;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use services\UsersService;
 use yasmf\NoControllerAvailableForNameException;
 use yasmf\NoServiceAvailableForNameException;
@@ -28,8 +30,6 @@ use yasmf\NoServiceAvailableForNameException;
 #[CoversClass(DefaultComponentFactory::class)]
 #[UsesClass(HomeController::class)]
 #[UsesClass(UsersService::class)]
-#[UsesClass(NoControllerAvailableForNameException::class)]
-#[UsesClass(NoServiceAvailableForNameException::class)]
 class DefaultComponentFactoryTest extends TestCase
 {
 

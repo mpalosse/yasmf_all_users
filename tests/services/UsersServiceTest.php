@@ -23,9 +23,11 @@ namespace services;
 use PDO;
 use PDOException;
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use yasmf\DataSource;
 
-
+#[CoversClass(UsersService::class)]
 class UsersServiceTest extends TestCase
 {
 
