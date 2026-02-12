@@ -6,7 +6,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/the-yasmf-project/yasmf"
+      "url": "https://github.com/mpalosse/yasmf"
     }
   ],
   "autoload": {
@@ -17,10 +17,10 @@
     }
   },
   "require": {
-    "php": ">=8.0",
-    "phpunit/phpunit": "10.0.*",
-    "phpstan/phpstan": "1.10.*",
+    "php": ">=8.4",
+    "phpunit/phpunit": "13.0.*",
+    "phpstan/phpstan": "2.1.*",
     "ext-pdo": "*",
-    "yasmf/yasmf": ">=1.6.1"
+    "yasmf/yasmf": ">=1.6.3"
   }
 }
